@@ -26,7 +26,7 @@
                             'route' => ['%%crudName%%.destroy', $item->id],
                             'style' => 'display:inline'
                         ]) !!}
-                            {!! Form::submit('Verwijderen', ['class' => 'btn btn-danger btn-xs']) !!}
+                            {!! Form::submit('Verwijderen', ['class' => 'btn btn-delete btn-danger btn-xs']) !!}
                         {!! Form::close() !!}
                     </td>
                 </tr>
