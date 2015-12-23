@@ -2,12 +2,12 @@
 
 @section('content')
 
-    <h1>%%crudNamePluralCap%% <a href="{{ route('%%crudName%%.create') }}" class="btn btn-primary pull-right btn-sm">Add New %%crudNameCap%%</a></h1>
+    <h1>%%crudNamePluralCap%% <a href="{{ route('%%crudName%%.create') }}" class="btn btn-primary pull-right btn-sm">%%crudNameCap%% toevoegen</a></h1>
     <div class="table">
         <table class="table table-bordered table-striped table-hover">
             <thead>
                 <tr>
-                    <th>S.No</th>%%formHeadingHtml%%<th>Actions</th>
+                    <th>#</th>%%formHeadingHtml%%<th>Acties</th>
                 </tr>
             </thead>
             <tbody>
@@ -18,15 +18,15 @@
                     <td>{{ $x }}</td>
                     %%formBodyHtml%%
                     <td>
-                        <a href="{{ route('%%crudName%%.edit', $item->id) }}">
-                            <button type="submit" class="btn btn-primary btn-xs">Update</button>
-                        </a> /
+                        <a href="{{ route('%%crudName%%.edit', $item->id) }}" class="btn btn-primary btn-xs">
+                            Aanpassen
+                        </a>
                         {!! Form::open([
-                            'method'=>'DELETE',
+                            'method'=> 'DELETE',
                             'route' => ['%%crudName%%.destroy', $item->id],
                             'style' => 'display:inline'
                         ]) !!}
-                            {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}
+                            {!! Form::submit('Verwijderen', ['class' => 'btn btn-danger btn-xs']) !!}
                         {!! Form::close() !!}
                     </td>
                 </tr>

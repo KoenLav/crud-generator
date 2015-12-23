@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1>Create New %%crudNameSingularCap%%</h1>
+    <h1>%%crudNameSingularCap%% toevoegen</h1>
     <hr/>
 
     {!! Form::open(['route' => '%%crudName%%.store', 'class' => 'form-horizontal']) !!}
@@ -11,7 +11,7 @@
 
     <div class="form-group">
         <div class="col-sm-offset-3 col-sm-3">
-            {!! Form::submit('Create', ['class' => 'btn btn-primary form-control']) !!}
+            {!! Form::submit('Toevoegen', ['class' => 'btn btn-primary form-control']) !!}
         </div>
     </div>
     {!! Form::close() !!}
